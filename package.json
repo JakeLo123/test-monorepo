@@ -1,0 +1,16 @@
+{
+  "name": "test-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "workspaces": [
+    "packages/core",
+    "packages/react-lib"
+  ],
+  "scripts": {
+    "build:core": "yarn workspace jake-core build",
+    "build:react-lib": "yarn build:core && yarn workspace jake-react-lib build"
+  },
+  "author": "",
+  "license": "ISC"
+}
