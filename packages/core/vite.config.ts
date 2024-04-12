@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "jake-core",
-      fileName: "index.ts",
+      fileName: "index",
     },
     rollupOptions: {
       input: resolve(__dirname, "src/index.ts"),
