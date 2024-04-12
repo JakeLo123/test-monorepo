@@ -8,15 +8,10 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.ts"),
       name: "jake-core",
       fileName: "index",
-    },
-    rollupOptions: {
-      input: resolve(__dirname, "src/index.ts"),
+      formats: ["es"],
     },
   },
   plugins: [dts()],
-  server: {
-    port: 3001,
-  },
   resolve: {
     alias: {
       src: "/src",

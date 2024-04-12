@@ -1,25 +1,43 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
+    // base options
+    "rootDir": "src",
+    "esModuleInterop": true,
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "target": "es2022",
+    "moduleDetection": "force",
     "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
+    "allowJs": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
 
-    /* Linting */
+    // strictness/linting
     "strict": true,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // transpiling
+    "module": "ESNext",
+    "outDir": "dist",
+
+    // include type declarations
+    "declaration": true,
+
+    // emits tsbuild.info files for caching so the monorepo can build faster
+    "composite": true,
+    // debugging sourcemaps for users of the library
+    "sourceMap": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+
+    // react
+    "jsx": "react-jsx",
+
+    // for running in the DOM
+    "lib": ["es2022", "dom", "dom.iterable"]
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"]
 }
